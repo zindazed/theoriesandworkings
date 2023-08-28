@@ -1,0 +1,47 @@
+<iframe
+          src="https://docs.google.com/presentation/d/e/2PACX-1vT-vJvdy1Bv4AXG6UT1yfXR0SXZqMubEpMyKVfvNoxCd8Knq1BXruZOgzcsVTwjmNFT5GKdq_xwVOn3/embed?start=false&loop=false&delayms=5000"
+          frameborder="0"
+          width="560"
+          height="315"
+          allowfullscreen="true"
+          mozallowfullscreen="true"
+          webkitallowfullscreen="true"
+        ></iframe>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdo5SND6qe9zpF8xFomCT8wv36nEUkLez5Dn_4CPjFEwdQe4A/viewform?embedded=true"
+          width="700"
+          height="520"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+        >
+          Loading…
+        </iframe>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/eHk_Y8bu13w"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <iframe
+          src="https://drive.google.com/file/d/1gfZbezH0jlTz2bXuzO1ao4T6fFyFXnl8/preview"
+          allow="autoplay"
+        ></iframe>
+        <iframe
+          width="560"
+          height="315"
+          title="Google Doc"
+          src="https://docs.google.com/document/d/e/2PACX-1vS-x0aJiTrxtgmXzUdyKaq0IEanQ5sRq0Nvhq8NhNf8UdOAuVfBRK53ZuEMxgbHSmDG39UDZq7xvCNg/pub?embedded=true"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        ></iframe>
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZN3Dvb0XSt3a_FnDL9UkSlJPHEEbgbVdqV0LS6dIWgZ2wjSp7fJva1npSGR3KNuYwfNxUxFyQxPVB/pubhtml?widget=true&amp;headers=false"></iframe>
+        <iframe
+          src="https://drive.google.com/file/d/1PLY5Cqg0TpS5R9Vb5Rzy8GeZMq7VcwUM/preview"
+          width="440"
+          height="50"
+          allow="autoplay"
+        ></iframe>
