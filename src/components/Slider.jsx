@@ -31,6 +31,12 @@ const slides = [
     type: ["Service"],
     image: require("../assets/images/reception.jpg"),
   },
+  {
+    title: "Watch Something Great",
+    subtitle: "Videos. clips, motion pictures, recordings",
+    type: ["Video"],
+    image: require("../assets/images/watch.jpg"),
+  },
 ];
 
 function useTilt(active) {
@@ -79,14 +85,25 @@ const initialState = {
   slideIndex: 0,
 };
 
+var period = "0.5s";
 const slidesReducer = (state, event) => {
   if (event.type === "NEXT") {
+    if ((state.slideIndex + 1) % slides.length === 0) {
+      period = "0.0s";
+    } else {
+      period = "0.5s";
+    }
     return {
       ...state,
       slideIndex: (state.slideIndex + 1) % slides.length,
     };
   }
   if (event.type === "PREV") {
+    if (state.slideIndex === 0) {
+      period = "0.0s";
+    } else {
+      period = "0.5s";
+    }
     return {
       ...state,
       slideIndex:
@@ -119,6 +136,7 @@ function Slide({ slide, offset }) {
         className="slideContent"
         style={{
           backgroundImage: `url('${slide.image}')`,
+          "--secs": period,
         }}
       >
         <div className="slideContentInner text-white">
@@ -144,12 +162,23 @@ function Slider() {
           justifyContent: "center",
           width: "fit-content",
         }}
-        onClick={() => dispatch({ type: "NEXT" })}
+        onClick={() => {
+          dispatch({ type: "NEXT" });
+          if ((state.slideIndex + 1) % slides.length === 0) {
+            setTimeout(() => {
+              dispatch({ type: "NEXT" });
+            }, 50);
+          } // Call the dispatch function twice
+        }}
       >
         ‹
       </button>
 
-      {[...slides, ...slides, ...slides].map((slide, i) => {
+      {[
+        ...slides.slice(0, slides.length - 1),
+        ...slides.slice(0, slides.length - 1),
+        ...slides.slice(0, slides.length - 1),
+      ].map((slide, i) => {
         let offset = slides.length + (state.slideIndex - i);
         return <Slide slide={slide} offset={offset} key={i} />;
       })}
@@ -161,7 +190,15 @@ function Slider() {
           justifyContent: "center",
           width: "fit-content",
         }}
-        onClick={() => dispatch({ type: "PREV" })}
+        onClick={() => {
+          dispatch({ type: "PREV" });
+
+          if (state.slideIndex === 0) {
+            setTimeout(() => {
+              dispatch({ type: "PREV" });
+            }, 50);
+          } // Call the dispatch function twice
+        }}
       >
         ›
       </button>
